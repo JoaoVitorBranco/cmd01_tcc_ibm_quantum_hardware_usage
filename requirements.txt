@@ -2,3 +2,4 @@ qiskit
 python-dotenv
 matplotlib
 qiskit-ibm-runtime
+qiskit_aer

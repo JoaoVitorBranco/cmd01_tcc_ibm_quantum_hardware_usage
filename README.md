@@ -2,19 +2,29 @@
 
 ## 📂 Description
 
-This repository contains experiments performed on the IBM Quantum platform, focusing on the implementation of the order finding algorithm—a fundamental component of Shor's algorithm. The goal is to evaluate the use of real IBM quantum hardware, its limitations, and differences compared to simulators.
+This repository contains practical experiments on the IBM Quantum platform, focusing on the implementation and execution of the order finding algorithm—a key component of Shor's algorithm for integer factorization. The notebook explores both theoretical and practical aspects, including modular exponentiation, quantum Fourier transform (QFT), and execution on real quantum hardware.
 
-## ⚛️ About the Experiment
+## ⚛️ About the Project
 
-The order finding algorithm is a central part of Shor's algorithm, used for integer factorization. In this project, quantum circuits are prepared and executed on real IBM Quantum backends using Qiskit and IBM Quantum Runtime.
+The notebook `0_sampler.ipynb` demonstrates:
+- Loading environment variables and authenticating with IBM Quantum.
+- Selecting the least busy real backend for execution.
+- Running basic quantum circuits (Hadamard gate measurement).
+- Querying backend qubit counts and operational status.
+- Building modular exponentiation gates and QFT circuits.
+- Constructing and executing the order finding circuit, including:
+  - Modular multiplication gates
+  - Quantum Fourier Transform
+  - Measurement and result analysis
+- Executing the order finding algorithm on real IBM Quantum hardware and simulators.
+- Processing results to estimate the order using continued fractions.
 
-Main steps of the experiment:
-- Authentication and configuration of the IBM Quantum account.
-- Automatic selection of the least busy real backend.
-- Execution of simple circuits (e.g., Hadamard gate on a qubit).
-- Measurement of real hardware results.
-- Visualization and analysis of practical limitations.
-- Querying the number of qubits available on different backends.
+## 📖 Theory
+
+The order finding algorithm is a central part of Shor's algorithm, which enables efficient integer factorization using quantum computers. The notebook includes:
+- Construction of modular multiplication gates
+- Implementation of the quantum Fourier transform (QFT)
+- Use of continued fractions to estimate the order from quantum measurements
 
 ## 📦 Requirements
 
@@ -39,18 +49,20 @@ Main steps of the experiment:
    IBM_QUANTUM_INSTANCE_CRN=your_instance_crn_here
    ```
 
-3. Run the notebook `0_sampler.ipynb` to execute the experiments.
+3. Open and run the notebook `0_sampler.ipynb` to execute the experiments and view results.
 
-## 📒 Code Structure
+## 📒 Notebook Structure
 
-The notebook `0_sampler.ipynb` includes:
-- Importing required libraries.
-- Loading environment variables.
-- IBM Quantum account setup.
-- Selection of the least busy real backend.
-- Execution of a simple circuit (Hadamard + measurement).
-- Visualization of results with histograms.
-- Querying the number of qubits of available backends.
+The notebook is organized as follows:
+1. **Imports and Setup**: Loads libraries, environment variables, and IBM Quantum credentials.
+2. **Basic Quantum Experiments**: Runs simple circuits and visualizes results using improved histograms.
+3. **Backend Information**: Lists available IBM Quantum backends and their qubit counts.
+4. **Order Finding Algorithm**:
+   - Implements modular multiplication gates
+   - Defines the order finding circuit
+   - Executes the algorithm on both simulators and real hardware
+   - Processes results to estimate the order
+5. **References**: Links to IBM Quantum documentation and resources.
 
 ## 🔗 References
 
